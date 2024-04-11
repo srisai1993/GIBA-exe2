@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css");
+@import url("../node_modules/material-design-icons/iconfont/material-icons.css");
+@import url("../node_modules/devextreme/dist/css/dx.light.css");
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+
+.disable-button{
+    background-color: lightgrey !important;
+    color: white !important;
+    min-width: 150px !important;
+}
+.button-secondry{
+    background-color:#04519b  !important;
+    color: white !important;
+    min-width: 150px !important;
+}
+.button-warning{
+    background-color:red !important;
+    color: white !important;
+    min-width: 120px !important;
+}
+.button-primary{
+    background-color:green  !important;
+    color: white !important;
+    min-width: 120px !important;
+}
+.display-block{
+    display: block;
+}
+
+
+.p-l-15{
+    padding-left:15px;
+}
+
+.p-l-10{
+    padding-left:10px;
+}
+
+.p-l-20{
+    padding-left:20px;
+}
+
+.p-l-30{
+    padding-left:30px;
+}
+
+.p-l-50{
+    padding-left:50px;
+}
+
+.p-l-100{
+    padding-left:100px;
+}
+
+ .p-l-5{
+    padding-left: 5px;
+ }
+
+ .p-l-3{
+    padding-left: 3px;
+ }
+
+
+
+ .p-r-10{
+    padding-right:10px;
+}
+
+.p-r-20{
+    padding-right:20px;
+}
+
+.p-r-30{
+    padding-right:30px;
+}
+
+.p-r-50{
+    padding-right:50px;
+}
+
+.p-r-100{
+    padding-right:100px;
+}
+
+ .p-r-5{
+    padding-right: 5px;
+ }
+
+ .p-r-3{
+    padding-right: 3px;
+ }
+
+
+
+ .p-t-10{
+    padding-top:10px;
+}
+.p-t-15{
+    padding-top:15px;
+}
+
+
+.p-t-20{
+    padding-top:20px;
+}
+
+.p-t-30{
+    padding-top:30px;
+}
+
+.p-t-50{
+    padding-top:50px;
+}
+
+.p-t-100{
+    padding-top:100px;
+}
+
+ .p-t-5{
+    padding-top: 5px;
+ }
+
+ .p-t-3{
+    padding-top: 3px;
+ }
+
+
+
+ .p-b-10{
+    padding-bottom:10px;
+}
+
+.p-b-20{
+    padding-bottom:20px;
+}
+
+.p-b-30{
+    padding-bottom:30px;
+}
+
+.p-b-50{
+    padding-bottom:50px;
+}
+
+.p-b-100{
+    padding-bottom:100px;
+}
+
+ .p-b-5{
+    padding-bottom: 5px;
+ }
+
+ .p-b-3{
+    padding-bottom: 3px;
+ }
+
+ ::ng-deep .mat-mdc-snack-bar-label,.mat-mdc-snack-bar-actions{
+    
+    background-color: red !important;
+    color: white !important;
+ }
+
+ ::ng-deep .mat-mdc-snack-bar-container {
+    --mdc-snackbar-container-color:  red !important;
+    --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+    --mat-snack-bar-button-color: rgba(255, 255, 255, 0.87);
+}

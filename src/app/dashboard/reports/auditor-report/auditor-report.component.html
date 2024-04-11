@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="main-body">
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="report-header"><span>
+                                Devexpress Reports
+                            </span></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <span> <b>Start Time</b> : 06-30-2023 12:00 am</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <span> <b>End Time </b>: 06-30-2023 11:59 pm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <span> <b>Plaza</b> : ALL</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <span> <b>Transportation Type</b>: ALL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                            <span> <b>Attenders</b> : ALL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div style="float: right;padding-bottom: 20px;">
+                            <!-- <button mat-button style="background-color:green ;color: white;"
+                                (click)="exportAsExcelFile()">
+                                Export To Excel
+                            </button> &nbsp;&nbsp;
+                            <button mat-button style="background-color:red ;color: white;" (click)="exportPDF()">
+                                Export To PDF
+                            </button> -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div id="content" class="table-container">
+                            <div style="float: right;padding-right:10px;">
+                            <dx-menu #menu [dataSource]="products" displayExpr="name"
+                            [showFirstSubmenuMode]="showFirstSubmenuModes" orientation="horizontal"
+                            [hideSubmenuOnMouseLeave]="false" (onItemClick)="itemClick($event)">
+                            </dx-menu></div>
+                            <dx-data-grid [dataSource]="dataSource" keyExpr="ID" [allowColumnReordering]="true"
+                                [showBorders]="true" (onExporting)="onExporting($event)">
+                                <dxi-column dataField="TransactionType"></dxi-column>
+                                <dxi-column dataField="Lanes"></dxi-column>
+                                <dxi-column dataField="Employee"></dxi-column>
+                                <dxi-column dataField="LaneMode"></dxi-column>
+                                <dxi-column dataField="PaymentMethod"></dxi-column>
+
+                                <dxo-selection mode="multiple"></dxo-selection>
+                                <dxo-paging [pageSize]="10"></dxo-paging>
+                                <dxo-grouping [autoExpandAll]="true"></dxo-grouping>
+                                <dxo-export [enabled]="true" [formats]="['pdf','csv','xlsx']"
+                                    [allowExportSelectedData]="false">
+                                </dxo-export>
+
+                               
+
+                            </dx-data-grid>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

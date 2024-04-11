@@ -1,0 +1,141 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="main-body">
+  
+          <!-- <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="report-header"><span>
+                  Detail Transaction Report Charts
+                </span></div>
+            </div>
+          </div> -->
+
+          <div class="row">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+              <div class="report-header"><span>
+                Transaction Report Charts
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <div style="float: right;">
+              <a [routerLink]="'/dashboard/auditorreports'">Devexpress Details</a>
+              <mat-icon>play_arrow</mat-icon><span>Transaction Report Charts</span>
+            </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span> <b>Start Time</b> : 06-30-2023 12:00 am</span>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                     <span> <b>End Time </b>:  06-30-2023 11:59 pm</span>
+                </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span> <b>Plaza</b> : ALL</span>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                     <span> <b>Transportation Type</b>:  ALL</span>
+                </div>
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <span> <b>Attenders</b> : ALL</span>
+                </div>
+            </div>
+          </div> 
+  
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+             
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div id="content" class="table-container">
+               
+                <dx-pie-chart *ngIf="urlId==='PieCharts'"
+                id="pie"
+                title="Transaction Types"
+                palette="bright"
+                [dataSource]="transactionType"
+               
+              >
+                <dxi-series argumentField="transactionType" valueField="due">
+                  <dxo-label [visible]="true">
+                    <dxo-connector [visible]="true" [width]="1"></dxo-connector>
+                  </dxo-label>
+                </dxi-series>
+                <dxo-size [width]="500"></dxo-size>
+                <dxo-export [enabled]="true"></dxo-export>
+              </dx-pie-chart>
+
+              <div id="chart-demo" *ngIf="urlId==='LineCharts'">
+                <dx-chart palette="Violet" [dataSource]="countriesInfo">
+                    <dxi-series
+                      *ngFor="let energy of energySources"
+                      [valueField]="energy.value"
+                      [name]="energy.name"
+                    >
+                    </dxi-series>
+                    <dxo-common-series-settings
+                      #seriesSettings
+                      argumentField="lane"
+                      [type]="types[0]"
+                    >
+                    </dxo-common-series-settings>
+                    <dxo-margin [bottom]="20"></dxo-margin>
+                    <dxo-argument-axis
+                      [valueMarginsEnabled]="false"
+                      discreteAxisDivisionMode="crossLabels"
+                    >
+                      <dxo-grid [visible]="true"></dxo-grid>
+                    </dxo-argument-axis>
+                    <dxo-legend
+                      verticalAlignment="bottom"
+                      horizontalAlignment="center"
+                      itemTextPosition="bottom"
+                    >
+                    </dxo-legend>
+                    <dxo-title text="Transaction Report from 2020">
+                      <dxo-subtitle text="(Cash Transaction Details)"> </dxo-subtitle>
+                    </dxo-title>
+                    <dxo-export [enabled]="true"></dxo-export>
+                    <dxo-tooltip [enabled]="true"></dxo-tooltip>
+                  </dx-chart>
+                  <div class="options">
+                    <div class="caption">Options</div>
+                    <div class="option">
+                      <span>Series Type</span>
+                      <dx-select-box
+                        [dataSource]="types"
+                        [(value)]="seriesSettings.type"
+                        [inputAttr]="{ 'aria-label': 'Series Type' }"
+                      >
+                      </dx-select-box>
+                    </div>
+                  </div>
+              </div>
+              
+
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>

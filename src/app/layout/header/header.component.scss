@@ -1,0 +1,35 @@
+.headerText {
+    padding: 0;
+    padding-left: 30px;
+    color: white;
+    text-decoration-line: none;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+
+.headerdiv {
+    min-height: 45px;
+    width: 100%;
+    // background-color: #04519b;
+    background-color: green;
+    height: auto;
+    margin: 0;
+}
+
+.mat-logout {
+    color: white;
+    float: right;
+    padding-right: 40px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.username {
+    color: white;
+    font-size: 15px;
+    float: right;
+    padding-right: 15px;
+    cursor: pointer;
+}

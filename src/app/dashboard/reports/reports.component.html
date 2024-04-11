@@ -1,0 +1,145 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="row">
+          <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+            <div class="report-header"><span>
+                Report Details
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <div style="float: right;">
+            <a [routerLink]="'/dashboard/reportslist'">Reports List</a>
+            <mat-icon>play_arrow</mat-icon><span >Report Details</span>
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            
+              <section class="example-section">
+                <label class="display-block">Select Plazas</label>
+                <mat-form-field  appearance="outline">
+                  <mat-label>Select Plaza</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let val of plazaslist" [value]="val">{{val}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </section>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <section class="example-section">
+                <label class="display-block">Select Date Range</label>
+                <mat-form-field  appearance="outline">
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate [(ngModel)]="startDate" placeholder="Start date">
+                    <input matEndDate [(ngModel)]="endDate" placeholder="End date">
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+              </section>
+             
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <section class="example-section">
+                <label class="display-block">Select Lanes</label>
+                <mat-form-field appearance="outline">
+                  <mat-label>Select Lanes</mat-label>
+                  <mat-select [(ngModel)]="selectedLanes"  multiple>
+                    <mat-option #allLanesSelected (click)="toggleLanes()" [value]="0">All</mat-option>
+                    <mat-option *ngFor="let val of lanesList" [value]="val">{{val}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </section>
+            </div>
+           
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <section class="example-section">
+                <label class="display-block">Report Subtitle (Optional)</label>
+                <mat-form-field appearance="outline">
+                  <mat-label>Report Subtitle (Optional)</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </section>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <section class="example-section">
+                <label class="display-block">Select Transaction Type</label>
+                <mat-form-field appearance="outline">
+                  <mat-select [(ngModel)]="selectedTransaction" multiple>
+                    <mat-option #allTransactionSelected (click)="toggleTransaction()" [value]="0">All</mat-option>
+                    <mat-option *ngFor="let val of transactionType" [value]="val">{{val}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </section>
+            </div>
+
+
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <section class="example-section">
+                <label class="display-block">Select Employees</label>
+                <mat-form-field  appearance="outline">
+                  <mat-select [(ngModel)]="selectedEmployees" multiple>
+                    <mat-option #allEmployeesSelected (click)="toggleEmployees()" [value]="0">All</mat-option>
+                    <mat-option *ngFor="let val of employeeList" [value]="val">{{val}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"></div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <section class="example-section">
+                  <div class="">
+                    <!-- <label class="display-block">Run Report</label> -->
+                    <button mat-button class="button-primary"
+                      [routerLink]="'/dashboard/viewreports'">
+                      Run Report
+                    </button> &nbsp;&nbsp;
+                    <button mat-button class="button-warning"
+                      [routerLink]="'/dashboard'">
+                      Exit
+                    </button>
+                  </div>
+                </section>
+             
+               
+
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+</div>

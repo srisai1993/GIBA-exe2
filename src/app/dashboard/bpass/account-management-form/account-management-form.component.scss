@@ -1,0 +1,49 @@
+.report-header{
+  font-size: 30px;
+  padding:20px;
+  // padding-left: 10px;
+  font-weight: 900;
+}
+
+.example-section {
+  margin: 0;
+  // padding-left: 10px;;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+.chk-select-all{
+  padding-left: 15px;
+}
+.chk-child{
+  padding-left: 55px;
+}
+
+.mat-mdc-radio-button{
+  width:100px !important;
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-right: 10px;
+}
+.navigation-header{
+  float: right;
+  padding-bottom: 20px;;
+}
+.material-icons{
+  font-size: 20px;
+  padding-top: 8px;
+}
+
+mat-form-field{
+  width: 100% !important;
+  min-width: 100px !important;
+}
+

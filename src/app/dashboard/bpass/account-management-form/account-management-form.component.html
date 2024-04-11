@@ -1,0 +1,536 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+      <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+          <div class="report-header"><span>
+              Open New Account
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <div style="float: right;">
+            <a [routerLink]="'/dashboard/bpass/accounts-list'">Account Management</a>
+            <mat-icon>play_arrow</mat-icon><span>Open New Account</span>
+          </div>
+        </div>
+      </div>
+
+      <form [formGroup]="acountTypeForm">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <section class="example-section">
+              <label class="display-block">Account Type</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Account Type</mat-label>
+                <mat-select  formControlName="acountType" (selectionChange)="onChangeAccountType($event)">
+                  <mat-option>--Select--</mat-option>
+                  <mat-option *ngFor="let val of ddlAccountTypes" [value]="val">{{val.avi_Account_Desc}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </section>
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <section class="example-section">
+              <label class="display-block">Type of Fee</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Type of Fee</mat-label>
+                <mat-select  formControlName="typeofFee">
+                  <mat-option>--Select--</mat-option>
+                  <mat-option *ngFor="let val of typeofFee" [value]="val.id">{{val.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </section>
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <section class="example-section">
+              <label class="display-block">Admin Fee</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Admin Fee</mat-label>
+                <input matInput type="number"  formControlName="adminFee">
+              </mat-form-field>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+            <section class="example-section">
+              <label class="display-block">Opening Balance</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Opening Balance</mat-label>
+                <input matInput type="number"  formControlName="openingBalance">
+              </mat-form-field>
+            </section>
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <section class="example-section">
+              <label class="display-block">Payment Method</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Payment Method</mat-label>
+                <mat-select  formControlName="paymentMethod">
+                  <mat-option>--Select--</mat-option>
+                  <mat-option *ngFor="let val of paymentMethods" [value]="val.id">{{val.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </section>
+
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <section class="example-section">
+              <label class="display-block">Threshold</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Threshold</mat-label>
+                <input matInput  formControlName="threshold">
+              </mat-form-field>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <section class="example-section">
+              <label class="display-block">Expiration</label>
+              <mat-form-field appearance="outline">
+                <mat-label>Expiration</mat-label>
+                <input matInput [matDatepicker]="picker"  formControlName="expiration">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </form>
+    
+      <hr>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+          <form [formGroup]="acountHolderInfoForm">
+
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h5>Account Holder Information</h5>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <section class="example-section">
+                  <label class="display-block">Account Holder</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Account Holder</mat-label>
+                    <input matInput formControlName="accountHolder">
+                  </mat-form-field>
+                </section>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">First Name</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">Last Name</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <section class="example-section">
+                  <label class="display-block">Business</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Business</mat-label>
+                    <input matInput formControlName="business">
+                  </mat-form-field>
+                </section>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">Address1</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address1</mat-label>
+                    <input matInput formControlName="address1">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">Address2</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address2</mat-label>
+                    <input matInput formControlName="address2">
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">City</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="city">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">State</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>State</mat-label>
+                    <mat-select  formControlName="state">
+                      <mat-option>--Select--</mat-option>
+                      <mat-option *ngFor="let val of states" [value]="val">{{val}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">Postal Code</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Postal Code</mat-label>
+                    <input matInput formControlName="postalCode">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div>
+                  <label class="display-block">Fax</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Fax</mat-label>
+                    <input matInput formControlName="fax">
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <div>
+                  <label class="display-block">Contact Phone</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Contact Phone</mat-label>
+                    <input matInput formControlName="contactPhone">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div>
+                  <label class="display-block">Extension</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Extension</mat-label>
+                    <input matInput formControlName="extension">
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <div>
+                  <label class="display-block">Mobile Phone</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Mobile Phone</mat-label>
+                    <input matInput formControlName="mobilePhone">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="p-t-10">
+                  <label class="display-block">SMS Alerts</label>
+                  <mat-checkbox formControlName="smsAlert" color="primary" class="example-margin" (change)="onchkSMS($event)"></mat-checkbox>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <div>
+                  <label class="display-block">Email</label>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="p-t-10">
+                  <label class="display-block">Email Alerts</label>
+                  <mat-checkbox formControlName="emailAlert" color="primary" class="example-margin" (change)="onchkEmail($event)"></mat-checkbox>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <section class="example-section float-left" >
+                      <button [ngClass]="disableAccountButtons == true ? 'disable-button' : 'button-primary'" mat-button>
+                        Check for Duplicates
+                      </button> &nbsp;&nbsp;
+                        <button (click)="onOpenNewAccount()" 
+                        [ngClass]="disableAccountButtons == true ? 'disable-button' : 'button-secondry'" mat-button>
+                          Open New Account
+                        </button> &nbsp;&nbsp;
+                        <button [ngClass]="disableAccountButtons == true ? 'disable-button' : 'button-warning'" mat-button>
+                          Cancel
+                        </button>
+                    </section>
+              </div>
+            </div>
+
+          </div>
+
+        </form>
+
+
+        <form [formGroup]="creditCardForm">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div style="height:auto ;float:right;  border-left: 1px solid lightgrey;padding-left: 30px;">
+             
+              <h5>Overview</h5>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                  <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <section class="example-section">
+                      <label class="display-block">Method</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Method</mat-label>
+                        <mat-select formControlName="method" (selectionChange)="onMethodChange($event)">
+                          <mat-option>--Select--</mat-option>
+                          <mat-option *ngFor="let val of overviewMethod" [value]="val">{{val}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </section>
+                  </div>
+
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <section class="example-section">
+                      <label class="display-block">Draft Method</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Draft Method</mat-label>
+                        <input matInput formControlName="draftMethod">
+                      </mat-form-field>
+                    </section>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <h5 class="p-l-15">Credit Card Details</h5>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <label class="p-l-30">Copy Contact Address</label>
+                  <mat-checkbox formControlName="verifyName" color="primary" class="example-margin"> Verify the name on the card below</mat-checkbox>
+                </div>
+              </div>
+              
+              <div class="p-b-30"></div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <section class="example-section">
+                      <label class="display-block">Card-Holder Name</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Card-Holder Name</mat-label>
+                        <input matInput formControlName="cardHolderName">
+                      </mat-form-field>
+                    </section>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div>
+                      <label class="display-block">Address1</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Address1</mat-label>
+                        <input matInput formControlName="address1">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div>
+                      <label class="display-block">Address2</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Address2</mat-label>
+                        <input matInput formControlName="address2">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div>
+                      <label class="display-block">City</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>City</mat-label>
+                        <input matInput formControlName="city">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <label class="display-block">State</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>State</mat-label>
+                        <mat-select formControlName="state">
+                          <mat-option>--Select--</mat-option>
+                          <mat-option *ngFor="let val of states" [value]="val">{{val}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div>
+                      <label class="display-block">Postal Code</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Postal Code</mat-label>
+                        <input matInput formControlName="postalCode">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div>
+                      <label class="display-block">Card Type</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Card Type</mat-label>
+                        <mat-select formControlName="cardType">
+                          <mat-option>--Select--</mat-option>
+                          <mat-option *ngFor="let val of cardTypes" [value]="val">{{val}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div>
+                      <label class="display-block">Card Number</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Card Number</mat-label>
+                        <input matInput type="number" minlength="14" maxlength="14" formControlName="cardNumber">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div>
+                      <label class="display-block">Expiration</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Expiration</mat-label>
+                        <input matInput formControlName="expiration">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div>
+                      <label class="display-block">Security Code</label>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Security Code</mat-label>
+                        <input matInput type="number" maxlength="3" formControlName="security">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      <section class="example-section" >
+                        <div class="">
+                          <button  mat-button [ngClass]="disableCCDetailsButtons == true ? 'disable-button' : 'button-primary'">
+                            Swipe
+                          </button> &nbsp;&nbsp;
+                          <button mat-button [ngClass]="disableCCDetailsButtons == true ? 'disable-button' : 'button-warning'">
+                            Manual
+                          </button>
+                        </div>
+                      </section>
+                    </div>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

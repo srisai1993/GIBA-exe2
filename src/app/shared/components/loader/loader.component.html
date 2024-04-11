@@ -1,0 +1,9 @@
+<div class="spin-overlay" *ngIf="isLoading | async" class="overlay">
+    <div role="status" class="spin-container" aria-label="Loading Content">
+        <img src="{{imagePath}}" alt="Loading, Please Wait..." class="spinning-image">
+        <!-- <mat-spinner strokeWidth="3" [diameter]="100"></mat-spinner> -->
+        <div class="spinner-message">
+            Please Wait...
+        </div>
+    </div>
+</div>

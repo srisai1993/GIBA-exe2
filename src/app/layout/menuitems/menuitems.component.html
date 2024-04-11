@@ -1,0 +1,103 @@
+<div class="nav-menu">
+  <div class="menuitems">
+
+    <button mat-button routerLink="dashboard" style="color: white !important;font-weight: bold;">Home</button>
+
+    <button mat-button [matMenuTriggerFor]="administration" style="color: white !important;font-weight: bold;">Administration</button>
+    <mat-menu #administration="matMenu">
+      <button mat-menu-item (click)="onEmpcardAccess()"><mat-icon>supervisor_account</mat-icon>
+        Employee Card Access System</button>
+      <button mat-menu-item><mat-icon>account_balance_wallet</mat-icon>
+        Fare Schedule Management</button>
+      <button mat-menu-item disabled>
+        <mat-icon>receipt</mat-icon>
+        Receipt Header Configuration
+      </button>
+      
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="bpass" style="color: white !important;font-weight: bold;">B-Pass</button>
+    <mat-menu #bpass="matMenu">
+      <button mat-menu-item (click)="onBpass('account-management')">	<mat-icon>work</mat-icon>
+        Account Management</button>
+      <button mat-menu-item ><mat-icon>create</mat-icon>
+        Tag Inventory Management</button>
+      <button mat-menu-item><mat-icon>markunread</mat-icon>
+        Web Tag Requests</button>
+      <button mat-menu-item><mat-icon>error_outline</mat-icon>
+        Auto-Replenishment Errors</button>
+      <button mat-menu-item><mat-icon>update</mat-icon>
+        Activity Log</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="revenue" style="color: white !important;font-weight: bold;">Revenue</button>
+    <mat-menu #revenue="matMenu">
+      <button mat-menu-item>Count Out Management</button>
+      <button mat-menu-item>Manifest Management</button>
+      <button mat-menu-item>Traffic Management</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="reports" style="color: white !important;font-weight: bold;">Reports</button>
+    <mat-menu #reports="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="auditorreports">AUDITOR REPORTS</button>
+      <button mat-menu-item [matMenuTriggerFor]="bpassreports">B-PASS REPORTS</button>
+      <button mat-menu-item [matMenuTriggerFor]="tollreports">TOLL MAINTENANCE REPORTS</button>
+      <button mat-menu-item [matMenuTriggerFor]="eomreports">EOM-ANALYSIS REPORTS</button>
+    </mat-menu>
+
+    <mat-menu #auditorreports="matMenu">
+      <button mat-menu-item routerLink="dashboard/auditorreports" >Detail Transaction</button>
+      <button mat-menu-item>Bank Manifest Listing</button>
+      <button mat-menu-item>Collector Count Out Listing</button>
+      <button mat-menu-item>Collector Shift</button>
+      <button mat-menu-item>Collector Performance</button>
+    </mat-menu>
+
+    <mat-menu #bpassreports="matMenu">
+      <button mat-menu-item>Account Current Summary</button>
+      <button mat-menu-item>Low/Negative Balance Accounts</button>
+      <button mat-menu-item>Account Monthly Statement</button>
+      <button mat-menu-item>CSR Transaction Listing</button>
+      <button mat-menu-item>CSR Transaction Listing For Settlement</button>
+      <button mat-menu-item>Traffic Management</button>
+      <button mat-menu-item>Daily Balance</button>
+      <button mat-menu-item>Replenishment</button>
+      <button mat-menu-item>Tag Inventory Summary</button>
+      <button mat-menu-item>Tag Manual Entry Listing </button>
+      <button mat-menu-item>Account Activity Listing</button>
+      <button mat-menu-item>In-Lane Transaction Listing</button>
+      <button mat-menu-item>Auto Replenishment Accounts</button>
+      <button mat-menu-item>Active Accounts Listing</button>
+      <button mat-menu-item>Expiring B-Pass Accounts</button>
+      <button mat-menu-item>Replenishment B-Pass Accounts</button>
+      <button mat-menu-item>Accout Listing with Expiring Credit Cards</button>
+      <button mat-menu-item>Account Monthly Statement Summary</button>
+      <button mat-menu-item>1-Year In Active Account Listing</button>
+      <button mat-menu-item>18-Month In Active Account Listing</button>
+      <button mat-menu-item>Tag Activity</button>
+    </mat-menu>
+
+    <mat-menu #tollreports="matMenu">
+      <button mat-menu-item>Detail Transaction Report</button>
+    </mat-menu>
+
+    <mat-menu #eomreports="matMenu">
+      <button mat-menu-item>Periodic Traffic Report By Class</button>
+      <button mat-menu-item>Periodic Traffic Report By Lane</button>
+      <button mat-menu-item>Periodic Traffic Report By Date</button>
+      <button mat-menu-item>Periodic Traffic Report By Month</button>
+      <button mat-menu-item>Periodic Revenue Report By Class</button>
+      <button mat-menu-item>Periodic Revenue Report By Lane</button>
+      <button mat-menu-item>Periodic Revenue Report By Date</button>
+      <button mat-menu-item>Periodic Revenue Report By Month</button>
+      <button mat-menu-item>Hourly Traffic</button>
+      <button mat-menu-item>Count Out Summary</button>
+      <button mat-menu-item>Periodic Shift Summary</button>
+      <button mat-menu-item>Periodic Shift Listing</button>
+      <button mat-menu-item>Dynamic CSR Activity Summary</button>
+      <button mat-menu-item>B-Pass Accounts Overview</button>
+    </mat-menu>
+    
+   <button mat-button (click)="onViewReports()" style="color: white !important;font-weight: bold;">Reports-List</button>
+
+  </div>
+</div>

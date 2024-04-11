@@ -1,0 +1,43 @@
+.content{
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding: 3px 5px;
+    position: relative;
+    overflow-y: auto;
+  }
+  .container{
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .header{
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #039be5;
+    padding: 3px 5px;
+  }
+  
+  
+  .footer{
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #eee;
+    padding: 3px 15px;
+  }
+
+  .current-time{
+    font-size: 25px;
+    font-weight: 900;
+    color: grey;
+    float: right;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  .time-header{
+    width: 100%;
+    min-height: 30px;
+    float: right;
+  }

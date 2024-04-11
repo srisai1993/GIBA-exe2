@@ -1,0 +1,50 @@
+::ng-deep .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 11, 11) !important;
+    opacity: 0.65;
+    height:100%;
+    width: 100%;
+    z-index: 1000;
+   // color:transparent;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    pointer-events: none !important;
+}
+::ng-deep .spin-container{
+    display: inline-flex;
+    position: absolute;
+    top:40%;
+    left: 40%;
+}
+::ng-deep .spinner-message{
+    position: absolute !important;
+    top:100%;
+    left: 50%;
+   // transform: translate(-50%,-50%);
+    color: #012169;
+    font-weight: bold;
+}
+::ng-deep .spin-overlay{
+    background-color:  lightgray !important;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}

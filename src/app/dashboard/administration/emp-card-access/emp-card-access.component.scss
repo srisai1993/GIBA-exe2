@@ -1,0 +1,46 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .emp-header{
+    font-size: 30px;
+    //padding-top:20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+  }
+  
+  .main-body {
+    //padding-top: 20px;
+    margin: 0 auto;
+    max-width: 1348px;
+    mat-form-field {
+      width: 100%;
+    }
+  }
+  
+  .action {
+    display: flex;
+    gap: 5px;
+  }
+
+  
+.table-header{
+  background-color: #04519b !important;
+  font-weight: bold !important;
+  color: white;
+}
+
+mat-cell{
+  display:flex !important;
+  justify-content:left!important;
+  
+}
+
+mat-header-cell {
+  display:flex;
+  justify-content:left;
+}
+
+mat-form-field{
+  width: 670px !important;
+}

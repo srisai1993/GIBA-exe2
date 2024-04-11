@@ -1,0 +1,272 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "sri",
+      "lastName": "sai",
+      "address1": "san fransico",
+      "address2": "san fransico",
+      "city": "washing ton",
+      "state": "dallas",
+      "boothpermission": [
+        "Lane Access",
+        "Unattended Mode"
+      ],
+      "softwarepermission": [
+        "B-Pass Management"
+      ],
+      "reportexecution": [
+        "Auditor Reports"
+      ],
+      "cardnumber": "123456",
+      "pin": "1456",
+      "postalcode": "500",
+      "phone": "88888",
+      "id": 2
+    },
+    {
+      "firstName": "ayyappa",
+      "lastName": "k",
+      "address1": "dallas",
+      "address2": "san fransico",
+      "city": "dallas",
+      "state": "dallas",
+      "boothpermission": "Lane Access",
+      "softwarepermission": "Administration",
+      "reportexecution": "B-Pass Reports",
+      "cardnumber": "4444",
+      "pin": "156",
+      "postalcode": "52004",
+      "phone": "50004",
+      "id": 3
+    },
+    {
+      "firstName": "anil",
+      "lastName": "kumar",
+      "address1": "utha",
+      "address2": "utha",
+      "city": "USA",
+      "state": "USA",
+      "boothpermission": "Lane Access",
+      "softwarepermission": "Administration",
+      "reportexecution": "B-Pass Reports",
+      "cardnumber": "5555",
+      "pin": "895",
+      "postalcode": "899",
+      "phone": "568412222",
+      "id": 4
+    },
+    {
+      "firstName": "Jhon",
+      "lastName": "stev",
+      "address1": "canada",
+      "address2": "canada",
+      "city": "canada",
+      "state": "canada",
+      "boothpermission": "Lane Access",
+      "softwarepermission": "Administration",
+      "reportexecution": "Supervisor Reports",
+      "cardnumber": "89989",
+      "pin": "456",
+      "postalcode": "5000",
+      "phone": "65656",
+      "id": 5
+    },
+    {
+      "firstName": "Test6",
+      "lastName": "Test5",
+      "address1": "234234",
+      "address2": "423423",
+      "city": "NY",
+      "state": "Ny",
+      "boothpermission": [
+        "Lane Access",
+        "Unattended Mode"
+      ],
+      "softwarepermission": [
+        "B-Pass Management",
+        "Administration",
+        "Cash Management"
+      ],
+      "reportexecution": [
+        "Auditor Reports",
+        "B-Pass Reports"
+      ],
+      "cardnumber": "123123",
+      "pin": "234234",
+      "postalcode": "23423",
+      "phone": "4325325",
+      "id": 6
+    }
+  ],
+  "reports": [
+    {
+      "auditor": "Detail Transaction Report",
+      "bPass": "B-Pass Account Current Summary Report ",
+      "tollMaintenance": "Detail Transaction Report",
+      "eomAnalysis": "Periodic Traffic Report By Class"
+    },
+    {
+      "auditor": "Bank Manifest Listing Report",
+      "bPass": "B-Pass Low/Negative Balance Accounts Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Traffic Report By Lane"
+    },
+    {
+      "auditor": "Collector Count Out Listing Report",
+      "bPass": "B-Pass Account Monthly Statement Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Traffic Report By Date"
+    },
+    {
+      "auditor": "Collector Shift Report",
+      "bPass": "CSR Transaction Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Traffic Report By Month"
+    },
+    {
+      "auditor": "Collector Performance Report",
+      "bPass": "CSR Transaction Listing Report For Settlement",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Revenue Report By Class"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Daily Balance Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Revenue Report By Lane"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Replenishment Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Revenue Report By Date"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Tag Inventory Summary Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Revenue Report By Month"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Tag Manual Entry Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Hourly Traffic Report"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Account Activity Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Count Out Summary Report"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass In-Lane Transaction Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Shift Summary Report"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Account Contact Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Periodic Shift Listing Report"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Tag Inventory  Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "Daily CSR Activity Summary Report"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Auto-Replenishment Accounts Report",
+      "tollMaintenance": "",
+      "eomAnalysis": "B-Pass Accounts Overview Report"
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Active Accounts Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "Expiring B-Pass Accounts Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "Replenished B-Pass Accounts Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Account Listing with Expiring Credit Cards Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Account Monthly Statement Summary Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass 1-Year In-Active Accounts Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass 18-Months In-Active Accounts Listing Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    },
+    {
+      "auditor": "",
+      "bPass": "B-Pass Tag Activity Report",
+      "tollMaintenance": "",
+      "eomAnalysis": ""
+    }
+  ],
+  "accounts": [
+    {
+      "id": 145,
+      "accountType": "Standard",
+      "status": "Active",
+      "firstName": "Mark Henry",
+      "lastName": "Jhon",
+      "balance": 45646
+    }
+  ],
+  "accountTypes": [
+    {
+      "id": 1,
+      "name": "Standard"
+    },
+    {
+      "id": 2,
+      "name": "Annual Pass"
+    }
+  ]
+}
