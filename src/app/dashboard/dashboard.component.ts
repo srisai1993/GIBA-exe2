@@ -323,6 +323,8 @@ export class DashboardComponent {
         "Body": email,
       }
 
+      //test changes
+
       // this._empService.sendEmail(MailRequest).subscribe({
       //   next: (res) => {
       //     console.log("Email has been sent");
